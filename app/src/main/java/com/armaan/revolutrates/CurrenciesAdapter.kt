@@ -1,15 +1,16 @@
-package com.armaan
+package com.armaan.revolutrates
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.armaan.revolutrates.R
 
 class CurrenciesAdapter: RecyclerView.Adapter<CurrenciesAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return ViewHolder.from(parent)
+        return ViewHolder.from(
+            parent
+        )
     }
 
     override fun getItemCount(): Int = 10

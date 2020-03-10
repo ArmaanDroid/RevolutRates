@@ -5,7 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 
-class CurrenciesAdapter: RecyclerView.Adapter<CurrenciesAdapter.ViewHolder>() {
+class CurrenciesAdapter : RecyclerView.Adapter<CurrenciesAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder.from(
@@ -16,7 +16,7 @@ class CurrenciesAdapter: RecyclerView.Adapter<CurrenciesAdapter.ViewHolder>() {
     override fun getItemCount(): Int = 10
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-       holder.setData(position)
+        holder.setData(position)
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -24,6 +24,7 @@ class CurrenciesAdapter: RecyclerView.Adapter<CurrenciesAdapter.ViewHolder>() {
 
         }
 
+        // Comapnion object for instantiating the viewholder in more convienient way
         companion object {
             fun from(parent: ViewGroup): ViewHolder {
                 val layoutInflater = LayoutInflater.from(parent.context)

@@ -8,6 +8,6 @@ import retrofit2.http.Query
 import java.util.*
 
 interface RatesApi {
-    @GET("")
+    @GET("latest")
     fun getRates(@Query("base") currency: String) : Deferred<Response<ApiResponse>>
 }

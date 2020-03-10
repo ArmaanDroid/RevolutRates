@@ -15,6 +15,7 @@ class WebClient {
         .addInterceptor(HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY))
         .build()
 
+    // Retrofit client to make the request & Moshi Converter to consume the response
     fun retrofit() : Retrofit = Retrofit.Builder()
         .client(httpClient)
         .baseUrl(BASE_URL)
@@ -22,7 +23,7 @@ class WebClient {
         .addCallAdapterFactory(CoroutineCallAdapterFactory())
         .build()
 
-
+    // RatesApi instance to invoke the request
     val ratesApi : RatesApi = retrofit().create(RatesApi::class.java)
 
 }

@@ -67,6 +67,9 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_extension_version"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_extension_version"
 
+    // Image Processing
+    implementation "com.facebook.fresco:fresco:$fresco_version"
+
     // Testing
     testImplementation "junit:junit:$junit_version"
     androidTestImplementation "androidx.test.ext:junit:$androidx_juint_ext_version"

@@ -3,7 +3,11 @@ package com.armaan.revolutrates
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.facebook.drawee.view.SimpleDraweeView
 
 class CurrenciesAdapter : RecyclerView.Adapter<CurrenciesAdapter.ViewHolder>() {
 
@@ -20,8 +24,14 @@ class CurrenciesAdapter : RecyclerView.Adapter<CurrenciesAdapter.ViewHolder>() {
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        fun setData(position: Int) {
 
+        val imageViewFlag = itemView.findViewById<SimpleDraweeView>(R.id.imageViewFlag)
+        val editTextAmount = itemView.findViewById<EditText>(R.id.editTextAmount)
+        val tvCurrencyCode = itemView.findViewById<TextView>(R.id.tvCurrencyCode)
+        val tvCurrncyName = itemView.findViewById<TextView>(R.id.tvCurrncyName)
+
+        fun setData(position: Int) {
+            imageViewFlag.setActualImageResource(R.drawable.splash_screen)
         }
 
         // Comapnion object for instantiating the viewholder in more convienient way
